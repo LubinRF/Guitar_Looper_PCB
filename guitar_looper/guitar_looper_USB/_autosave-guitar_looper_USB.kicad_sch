@@ -1,0 +1,154 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "65f39d4e-bb4d-4f22-9c0f-00bb691729e2")
+	(paper "A4")
+	(title_block
+		(title "Main sheet")
+	)
+	(lib_symbols)
+	(text "This project is a compact guitar looper designed for real-time audio recording and playback with low latency performance. \nThe system is powered via a USB-C interface, providing both convenient power delivery and modern connectivity.\n\nAt the core of the design is an STM32 F4 series microcontroller, which handles system control,\n audio processing, and data management tasks.\n\nAudio is processed using a dedicated audio codec connected via the I2S digital audio interface,\nensuring high-quality and synchronous audio streaming between the microcontroller and the analog front end.\n\nFor extended audio buffering and loop storage, \nthe system utilizes external PSRAM connected via the SPI interface, significantly \nincreasing available memory for real-time audio manipulation.\n\nThe device also includes a built-in drum loop generation feature, allowing users to play back \nrhythm tracks and synchronize them with recorded guitar loops.\n\nFrom a hardware design perspective, \nall capacitors used in the analog signal path are C0G/NP0 types to ensure maximum stability, low distortion, \nand minimal signal degradation. All resistors in the analog domain are implemented using thin \nfilm technology for high precision and low noise.\n\nIn contrast, the digital sections of the circuit utilize X7R capacitors\n and thin film resistors where precision is less critical,\n optimizing both cost and board space while maintaining reliable performance.\n\nOverall, the design combines high-quality analog audio handling with a flexible \ndigital architecture, making it suitable for both live performance and practice environments."
+		(exclude_from_sim no)
+		(at 21.082 59.944 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "86cdd811-66ea-4af9-9ffe-d1a47bc7bfa2")
+	)
+	(sheet
+		(at 22.225 108.585)
+		(size 48.26 51.435)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "01692c47-89d0-4b3a-a0e2-8620f58a58a7")
+		(property "Sheetname" "Power"
+			(at 22.225 107.8734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 22.225 160.6046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "guitar_looper_USB"
+				(path "/65f39d4e-bb4d-4f22-9c0f-00bb691729e2"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 194.31 104.775)
+		(size 51.435 53.975)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "088f2ed9-4ca7-449b-a60e-a7f8e3c28c78")
+		(property "Sheetname" "analog"
+			(at 194.31 104.0634 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "analog.kicad_sch"
+			(at 194.31 159.3346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "guitar_looper_USB"
+				(path "/65f39d4e-bb4d-4f22-9c0f-00bb691729e2"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 83.185 108.585)
+		(size 78.105 53.34)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "405a54fc-0724-4dbb-b858-1a5eee7ba7a8")
+		(property "Sheetname" "MCU+DAC"
+			(at 83.185 107.8734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCUDAC.kicad_sch"
+			(at 83.185 162.5096 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "guitar_looper_USB"
+				(path "/65f39d4e-bb4d-4f22-9c0f-00bb691729e2"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
